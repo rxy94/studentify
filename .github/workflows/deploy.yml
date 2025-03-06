@@ -27,7 +27,11 @@ jobs:
         aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
     - name: Deploy Application
       run:
+<<<<<<< HEAD
         aws deploy create-deployment --application-name Studentify /
+=======
+        aws deploy create-deployment --aplication-name Studentify /
+>>>>>>> 46fe9905ae3a324e048d23e2058181cd5dc135f9
           --deployment-group-name Backends /
           --github-location repository=${{github.GITHUB_REPOSITORY}},commitId=${{github.GITHUB_SHA}} /
           --region ${{ vars.REGION }}
