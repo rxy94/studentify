@@ -27,10 +27,10 @@ jobs:
         aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
     - name: Deploy Application
       run:
-        aws deploy create-deployment --application-name Studentify /
-          --deployment-group-name Backends /
-          --github-location repository=${{github.GITHUB_REPOSITORY}},commitId=${{github.GITHUB_SHA}} /
-          --region ${{ vars.REGION }}
+        aws deploy create-deployment --application-name Studentify \
+          --deployment-group-name Backends \
+          --github-location repository=${{github.GITHUB_REPOSITORY}},commitId=${{github.GITHUB_SHA}} \
+          --region ${{ vars.REGION }} \
           --file-exists-behavior OVERWRITE
 
 
