@@ -26,7 +26,8 @@ public class Health {
     }
 
     public String getStatus() {
-        return status;
+        return message;
+        //return status;
     }
     public void setStatus(String status) {
         this.status = status;
